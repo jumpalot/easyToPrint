@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylee.css">
+    <script src="../JsBarcode.all.js"></script>
+    <title>Carnet</title>
+</head>
+<body>
+    <article class="carnet">
+        <div class="marcagua"><img src="../img/logo-m.jpg" width=100% height="100%"></div>
+         <section class="ncarnet rotate">
+            <div class="datocarnet"><h1>Nº 3635</h1></div>
+         </section>
+         <section class="banner">
+            <div class="logo">
+                <img src="../img/logo-s.jpg" width="100%" height="100%" >
+            </div>
+            <h1>E.E.S.T.Nº3 - E.E.S.Nº7</h1>
+            <h3>Las Araucarias 1450 - Tortuguitas</h3>
+        </section>
+        <section class="datos">
+            <span id="nombre">Juan Pablo Gardey</div><br>
+            <span id="dni"> DNI 43800987</span><br>
+            <span id="turno">TURNO VESPERTINO</span>
+        </section>
+        <section class='curso'>
+            <span>7º 1ª Técnica</span>
+        </section>
+         <section class="barcode-box">
+            <section class="barcode">
+                <div>
+                    <img id="barcode3635" class="barcode-img"/>
+                    <script>
+                        JsBarcode("#barcode3635", "43800987", {
+                            format:"CODE128",
+                            displayValue:true,
+                            fontSize:20,
+                            lineColor: "#000",
+                        });
+                    </script>
+                </div>
+            </section>
+        </section>
+        <section class="foto">
+            <img src="../CARNETS2B2_files/6354.jpg">
+        </section>
+    </article>
+</body>
+</html>

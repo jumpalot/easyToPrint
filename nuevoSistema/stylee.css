@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Kadwa";
+  src: url("../fonts/Kadwa-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Kadwa";
+  src: url("../fonts/Kadwa-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "barcode font";
+  src: url("../fonts/EAN-13.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.carnet#only {
+  position: absolute;
+  margin:  0px;
+  left: -100px;
+}
+
+.carnet {
+  position: relative;
+  --mar: calc((50% - 600px) / 2);
+  margin: 0px var(--mar) 66px var(--mar);
+  border: solid 3px darkgreen;
+  height: 350px;
+  width: 600px;
+  padding: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.atras {
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: center;
+}
+.ncarnet {
+  position: absolute;
+  top: 30px;
+  left: -46%;
+  height: 15%;
+  width: 100%;
+  background-color: rgba(10, 70, 40, 0.7);
+  color: white;
+  overflow: hidden;
+}
+
+.ncarnet h1 {
+  font-family: "Glegoo", serif;
+  font-weight: 700;
+  font-size: 28pt;
+  z-index: 2;
+}
+.carnet > h1 {
+  font-family: "Kadwa", serif;
+  font-weight: 700;
+  color: red;
+  z-index: 2;
+}
+.datocurso {
+  margin-left: 45px;
+  margin-bottom: 12px;
+  width: 140px;
+  float: left;
+  z-index: 2;
+}
+.datocarnet {
+  margin-left: 200px;
+  margin-bottom: 100px;
+  width: 200px;
+  z-index: 2;
+}
+/* #nombre {
+  font-size: 14pt;
+  color: firebrick;
+  z-index: 20;
+} */
+#nombre,
+#dni,
+#turno {
+  font-size: 16pt;
+  color: firebrick;
+  z-index: 2;
+}
+
+.banner {
+  position: absolute;
+  height: 60px;
+  width: 350px;
+  left: 12%;
+  font-family: "Glegoo", serif;
+  font-weight: 700;
+  font-size: 14pt;
+}
+.banner > .logo {
+  position: relative;
+  float: left;
+  height: 60px;
+  width: 60px; /* background-image: url(../img/logo-s.jpg);background-size: cover;*/
+  margin-right: 10px;
+}
+.banner > h3 {
+  font-family: "Glegoo", serif;
+  font-weight: 400;
+  font-size: 11pt;
+}
+.marcagua {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0.1;
+  width: 330px;
+  height: 330px;
+  margin-left: 25%;
+  margin-right: 25%; /*background-image: url(../img/logo-m.jpg);background-size: cover*/
+}
+.datos {
+  position: absolute;
+  top: 80px;
+  height: 60px;
+  width: 320px;
+  left: 12%;
+  font-family: "Glegoo", serif;
+  font-weight: 700;
+  font-size: 15pt;
+  z-index: 2;
+}
+.foto > img {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+.foto {
+  position: absolute; /*border: solid 2px rgba(10,70,40,.7);*/
+  height: 190px;
+  width: 200px;
+  top: 80px;
+  right: 30px;
+  overflow: hidden;
+  z-index: 0;
+}
+.curso {
+  margin-bottom: 6px;
+  position: absolute;
+  left: 70px;
+  bottom: 90px;
+  font-family: "Glegoo", serif;
+  font-weight: 700;
+  font-size: 25pt;
+  z-index: 2;
+}
+.barcode-box {
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  left: 60px;
+  bottom: 40px;
+  font-family: "", serif;
+  font-size: 200px;
+  overflow: hidden;
+}
+.barcode {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  font-size: 60pt;
+}
+.barcode-img {
+  position: absolute;
+  top: -80px;
+  width: 99%;
+  opacity: 1;
+}
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}

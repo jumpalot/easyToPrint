@@ -2,7 +2,7 @@
     $carnet=$alumno->Carnet;
     $nombre=$alumno->Apellido." ".$alumno->Nombre;
     $dni=$alumno->Dni;
-    $turno="TURNO";
+    $turno=$alumno->Turno;
     $curso=$alumno->Curso.'º '.$alumno->Division.'ª';
     $escuela="Escuela";
     $foto=getFoto($carnet);

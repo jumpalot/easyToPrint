@@ -1,17 +1,15 @@
 <?php
     include('DBCon.php');
     $sql = "INSERT INTO alumnos 
-        (Carnet, Nombre, Apellido, Sexo, Edad, Curso, Division, Dni, FechaNac) 
+        (Carnet, Curso, Division, Nombre, Apellido, Dni, Turno ) 
         values (
         '".$_POST['carnet']."', 
-        '".$_POST['nombre']."', 
-        '".$_POST['apellido']."', 
-        '".$_POST['sexo']."', 
-        '".$_POST['edad']."',
         '".$_POST['curso']."',
         '".$_POST['division']."',
+        '".$_POST['nombre']."', 
+        '".$_POST['apellido']."',
         '".$_POST['dni']."',
-        '".$_POST['fn']."'
+        '".$_POST['turno']."'
         )
     ";
     $db->query($sql);

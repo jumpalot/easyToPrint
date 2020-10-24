@@ -1,6 +1,7 @@
 <?php
     include('DBCon.php');
-    $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido, Sexo, Edad, hasImg, Dni FROM alumnos
+    $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido, hasImg, Dni, Turno 
+            FROM alumnos NATURAL JOIN turnos
             WHERE Dni=".$_GET['dni'];
     $aux = array();
     foreach($db->query($sql) as $alumno)

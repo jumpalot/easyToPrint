@@ -1,5 +1,5 @@
 <?php
-    $db = new mysqli('localhost','id13103965_admin','UaZk=JqA5@SkVga~','id13103965_carnets');
+    include('DBCon.php');
     $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido, Sexo, Edad, hasImg, Dni FROM alumnos
             WHERE Dni=".$_GET['dni'];
     $aux = array();

@@ -23,7 +23,7 @@
 .carnet#only {
   position: absolute;
   margin:  0px;
-  left: -100px;
+  /* left: -100px; */
 }
 
 .carnet {

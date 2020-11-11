@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4b3498cf753d9ef5a55b804c318d030a9bf902e8',
+    'reference' => '295a9cba3fd7549a2f819810be35470560264619',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4b3498cf753d9ef5a55b804c318d030a9bf902e8',
+      'reference' => '295a9cba3fd7549a2f819810be35470560264619',
+    ),
+    'rebasedata/php-client' => 
+    array (
+      'pretty_version' => 'v1.0.6',
+      'version' => '1.0.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '557b3197bd9843499d0308ea3f6e95c6e6ecc321',
     ),
     'twbs/bootstrap' => 
     array (

@@ -6,7 +6,7 @@
                 Nombre      = '".$_POST['nombre']."',
                 Apellido    = '".$_POST['apellido']."',
                 Dni         = '".$_POST['dni']."',
-                Turno       = '".$_POST['turno']."'
+                idTurno     = '".$_POST['turno']."'
             WHERE Carnet    = '".$_POST['carnet']."'
     ";
     $db->query($sql);

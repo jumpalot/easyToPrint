@@ -1,6 +1,6 @@
 <article class="carnet atras">
-    <div id="qrcode#<?=$dni?>" class="qr"></div>
+    <div id="qrcode#<?=$carnet?>" class="qr"></div>
     <script type="text/javascript">
-      new QRCode("qrcode#<?=$dni?>", "<?=$dni?>");
+      new QRCode("qrcode#<?=$carnet?>", "<?=$carnet?>");
     </script>
 </article>

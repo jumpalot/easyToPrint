@@ -1,5 +1,5 @@
 <?php
-    require('vendor/autoload.php');
+    require('../vendor/autoload.php');
     require('header.html');
     require('funciones.php');
     $alumnos = getAlumnos();

@@ -1,9 +1,10 @@
 <?php
     include('DBCon.php');
     $carnet = $_POST['carnet'];
-    $sql = "SELECT listas.*
+    $sql = "SELECT lal.cantidad, listas.nombre
             FROM alumno_lista As lal
-            NATURAL JOIN listas
+            INNER JOIN listas 
+            ON lal.idLista = listas.idLista
             WHERE lal.Carnet=$carnet
             ORDER BY lal.caducidad, listas.caducidad ASC";
     $aux = array();

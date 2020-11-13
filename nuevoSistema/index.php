@@ -15,7 +15,7 @@
         case 'reverse':
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){
-                    $dni=$alumno->Dni;
+                    $carnet=$alumno->Carnet;
                     include('parteAtras.php');
                 }
             }

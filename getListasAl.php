@@ -1,7 +1,7 @@
 <?php
     include('DBCon.php');
     $carnet = $_POST['carnet'];
-    $sql = "SELECT lal.cantidad, listas.nombre
+    $sql = "SELECT lal.cantidad, listas.nombre, lal.idLista
             FROM alumno_lista As lal
             INNER JOIN listas 
             ON lal.idLista = listas.idLista

@@ -23,6 +23,7 @@
         WHERE Carnet='".$_POST['carnet']."'
     ";
     $db->query($sql);
+    echo $db->error;
     mysqli_close($db);
 
     

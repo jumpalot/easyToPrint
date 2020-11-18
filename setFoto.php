@@ -15,16 +15,14 @@
     }
 
     include('DBCon.php');
+    $carnet = $_POST['carnet'];
     $foto = $_POST['foto'];
     $miniatura = getMini($foto);
-    $sql = "
-        UPDATE alumnos 
-        SET Foto='$foto', Miniatura='$miniatura', hasImg=1
-        WHERE Carnet='".$_POST['carnet']."'
-    ";
+    $sql = "UPDATE alumnos 
+            SET Foto='$foto', Miniatura='$miniatura', hasImg=1
+            WHERE Carnet='$carnet'";
     $db->query($sql);
     echo $db->error;
     mysqli_close($db);
 
-    
 ?>

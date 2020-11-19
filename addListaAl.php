@@ -5,6 +5,7 @@
     $sql = "INSERT INTO alumno_lista(Carnet, idLista)
             VALUES ('$carnet', '$idl') 
             ON DUPLICATE KEY UPDATE cantidad=cantidad+1";
+    $db->query($sql);
     echo $db->error;
     mysqli_close($db);
 ?>

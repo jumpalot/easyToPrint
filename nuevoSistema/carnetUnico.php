@@ -1,5 +1,5 @@
 <?php
-    require('header.html');
+    require('simpleheader.html');
     require('funciones.php');
     $alumno = getAlumno($_GET['carnet'])[0];
     include('bindAlumno.php');

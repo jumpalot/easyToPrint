@@ -1,6 +1,6 @@
 <?php
     include('DBCon.php');
-    $carnet = $_POST['carnet'];
+    $carnet = $_REQUEST['carnet'];
     $sql = "SELECT Miniatura FROM alumnos WHERE Carnet='$carnet'";
     $res = $db->query($sql);
     if ($db->error!="") echo $db->error;

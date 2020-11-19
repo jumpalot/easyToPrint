@@ -3,8 +3,8 @@
     $carnet = $_POST['carnet'];
     $idl = $_POST['idl'];
     $sql = "INSERT INTO alumno_lista(Carnet, idLista)
-            VALUES ($carnet, $idl) 
-            ON DUPLICATE KEY cantidad=cantidad+1";
+            VALUES ('$carnet', '$idl') 
+            ON DUPLICATE KEY UPDATE cantidad=cantidad+1";
     echo $db->error;
     mysqli_close($db);
 ?>

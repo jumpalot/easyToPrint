@@ -1,7 +1,8 @@
 <?php
     include('DBCon.php');
     $curso = $_POST['curso'];
-    $sql="SELECT DISTINCT Division FROM alumnos WHERE Curso='$curso' ORDER BY Division ASC";
+    $where = ($curso!=0) ? "WHERE Curso='$curso'" : "";
+    $sql="SELECT DISTINCT Division FROM alumnos $where ORDER BY Division ASC";
     $res='';
     $q = $db->query($sql);
     while ($divi = $q->fetch_assoc())

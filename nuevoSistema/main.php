@@ -8,14 +8,14 @@
               <br>
               <div class="form-label-group Collapse">
                 <select name="curso" id="cursos" class="form-control" onchange="actualizarDivis(this.value)" required autofocus>
-                  <option selected disabled value="" hidden>Ingrese Curso</option>
+                  <option selected disabled value="0" hidden>Ingrese Curso</option>
                   <option value="0">Todos</option>
                 </select>
               </div>
               <br>
               <div class="form-label-group Collapse">
                 <select name="division" id="divisiones" class="form-control " required>
-                  <option selected disabled value="" hidden>Ingrese Division</option>
+                  <option selected disabled value="0" hidden>Ingrese Division</option>
                 	<option value="0">Todas</option>
                 </select>
               </div>

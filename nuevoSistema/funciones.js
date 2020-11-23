@@ -1,6 +1,6 @@
-var divisiones;
+var originalList;
 window.onload = () => {
-    divisiones = $('#divisiones').html();
+    originalList = $('#divisiones').html();
     $.post("../getCursos.php", (cursos) => {
         var lista = $('#cursos').html();
         cursos.split(',').forEach( (curso) => 
@@ -12,8 +12,8 @@ window.onload = () => {
 function actualizarDivis(curso){
     if (curso!="")
         $.post("../getDivisiones.php", {curso: curso}, (divisiones) => {
-            var lista = divisiones;
-            lista.split(',').forEach( (division) => 
+            var lista = originalList;
+            divisiones.split(',').forEach( (division) => 
                 lista += '<option value="' + division + '">' + division + 'ª</option>'
             );
             $('#divisiones').html(lista);

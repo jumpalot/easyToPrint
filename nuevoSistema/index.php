@@ -12,6 +12,7 @@
                     include('plantilla.php');
                 }
             }
+            include('autoprint.html');
             break;
         case 'reverse':
             $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
@@ -22,6 +23,7 @@
                     include('parteAtras.php');
                 }
             }
+            include('autoprint.html');
             break;  
         default:
             include('header.html');

@@ -7,28 +7,16 @@
             <form class="form-signin" method="GET" action="." target="_blank">
               <br>
               <div class="form-label-group Collapse">
-                <select name="curso" id="cursos" class="form-control"  required autofocus>
-                  <option selected value="0" hidden>Ingrese Curso</option>
-                	<option value="1">Primero</option>
-                	<option value="2">Segundo</option>
-                  <option value="3">Tercero</option>
-                  <option value="4">Cuarto</option>
-                  <option value="5">Quinto</option>
-                  <option value="6">Sexto</option>
-                  <option value="7">Septimo</option>
+                <select name="curso" id="cursos" class="form-control" onchange="actualizarDivis(this.value)" required autofocus>
+                  <option selected disabled value="" hidden>Ingrese Curso</option>
+                  <option value="0">Todos</option>
                 </select>
               </div>
               <br>
               <div class="form-label-group Collapse">
                 <select name="division" id="divisiones" class="form-control " required>
-                  <option selected value="0" hidden>Ingrese Division</option>
-                	<option value="1">Primera</option>
-                	<option value="2">Segunda</option>
-                  <option value="3">Tercera</option>
-                  <option value="4">Cuarta</option>
-                  <option value="5">Quinta</option>
-                  <option value="6">Sexta</option>
-                  
+                  <option selected disabled value="" hidden>Ingrese Division</option>
+                	<option value="0">Todas</option>
                 </select>
               </div>
               <br>

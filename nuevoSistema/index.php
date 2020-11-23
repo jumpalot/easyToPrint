@@ -28,6 +28,7 @@
         default:
             include('header.html');
             include('main.php');
+            include('importador.html');
     }
     require('footer.html');
 ?>

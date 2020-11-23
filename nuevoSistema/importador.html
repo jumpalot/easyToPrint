@@ -1,0 +1,36 @@
+<button 
+  class="btn btn btn-sucess btn-block text-uppercase esquina" 
+  data-toggle="modal" 
+  data-target="#importar">
+  Importar Datos
+</button>
+<div class="modal fade" id="importar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Importar datos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form enctype="multipart/form-data" action="../impAlumnos.php" method="POST">
+        <div class="modal-body">
+          <input type="hidden" name="MAX_FILE_SIZE" value="209715200" />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Access</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+              <label class="custom-file-label" for="inputGroupFile01">Seleccionar Archivo</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" type="submit">Importar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

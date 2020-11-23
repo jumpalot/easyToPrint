@@ -22,7 +22,6 @@
               <br>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="page" value="list">Listar frente</button>
               <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit" name="page" value="reverse">Listar reverso</button>
-              <button class="btn btn-lg btn-dark btn-block text-uppercase" type="submit">Opcion1	</button>
             </form>
           </div>
         </div>

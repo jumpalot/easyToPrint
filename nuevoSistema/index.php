@@ -2,9 +2,9 @@
     require('../vendor/autoload.php');
     
     require('funciones.php');
-    $alumnos = getAlumnos();
     switch(@$_GET['page']){
         case 'list':
+            $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
             include('simpleheader.html');
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){
@@ -14,6 +14,7 @@
             }
             break;
         case 'reverse':
+            $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
             include('simpleheader.html');
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){

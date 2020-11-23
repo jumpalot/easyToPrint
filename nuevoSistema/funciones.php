@@ -1,7 +1,7 @@
 <?php
-    function getAlumnos(){
+    function getAlumnos($curso, $division){
         return json_decode(
-            file_get_contents("https://itching-requirement.000webhostapp.com/getAlumnos.php")
+            file_get_contents("https://itching-requirement.000webhostapp.com/getAlumnos.php?curso=$curso&division=$division")
         );
     }
     function getAlumno($carnet){

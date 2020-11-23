@@ -5,7 +5,7 @@
     if(isset($_GET['curso']) && $_GET['curso']!="0" ){
         $curso=$_GET['curso'];
         $sql.=" WHERE Curso='$curso'";
-        if(isset($_GET['division'])){
+        if(isset($_GET['division']) && $_GET['division']!="0"){
             $division=$_GET['division'];
             $sql.=" AND Division='$division'";
         }

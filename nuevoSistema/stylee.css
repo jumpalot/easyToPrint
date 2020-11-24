@@ -12,6 +12,10 @@
   font-family: "barcode font";
   src: url("../fonts/EAN-13.ttf");
 }
+@page {
+  size: A4 portrait; 
+  margin: 3%;
+}
 * {
   padding: 0;
   margin: 0;
@@ -22,22 +26,22 @@
 
 .carnet#only {
   position: absolute;
-  margin:  0px;
-  /* left: -100px; */
+  margin:  0cm;
+  /* left: -100*0.0138; */
 }
 
 .carnet {
   position: relative;
-  --mar: calc((50% - 600px) / 2);
-  margin: 0px var(--mar) 66px var(--mar);
-  border: solid 3px darkgreen;
-  height: 350px;
-  width: 600px;
-  padding: 10px;
+  --mar: calc((50% - 8.28cm) / 2);
+  margin: 0cm var(--mar) 0.5cm var(--mar);
+  border: solid 0.0414cm darkgreen;
+  height: 4.83cm;
+  width: 8.28cm;
+  padding: 0.138cm;
   overflow: hidden;
   float: left;
+  page-break-inside:avoid;
 }
-
 .atras {
   display: flex;
   float: right;
@@ -46,7 +50,7 @@
 }
 .ncarnet {
   position: absolute;
-  top: 30px;
+  top: 0.414cm;
   left: -46%;
   height: 15%;
   width: 100%;
@@ -54,11 +58,14 @@
   color: white;
   overflow: hidden;
 }
+.imgbar{
+  float: left;
+}
 
 .ncarnet h1 {
   font-family: "Glegoo", serif;
   font-weight: 700;
-  font-size: 28pt;
+  font-size: 14pt;
   z-index: 2;
 }
 .carnet > h1 {
@@ -68,70 +75,74 @@
   z-index: 2;
 }
 .datocurso {
-  margin-left: 45px;
-  margin-bottom: 12px;
-  width: 140px;
+  margin-left: 0.621cm;
+  margin-bottom: 0.1656cm;
+  width: 1.932cm;
   float: left;
   z-index: 2;
 }
 .datocarnet {
-  margin-left: 200px;
-  margin-bottom: 100px;
-  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 2.76cm;
+  margin-bottom: 1.38cm;
+  width: 2.76cm;
+  color: white;
   z-index: 2;
 }
 /* #nombre {
-  font-size: 14pt;
+  font-size: 7pt;
   color: firebrick;
   z-index: 20;
 } */
 #nombre,
 #dni,
 #turno {
-  font-size: 16pt;
+  font-size: 8pt;
   color: firebrick;
   z-index: 2;
 }
 
 .banner {
   position: absolute;
-  height: 60px;
-  width: 350px;
+  height: 0.828cm;
+  width: 4.83cm;
   left: 12%;
   font-family: "Glegoo", serif;
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 7pt;
 }
 .banner > .logo {
   position: relative;
   float: left;
-  height: 60px;
-  width: 60px; /* background-image: url(../img/logo-s.jpg);background-size: cover;*/
-  margin-right: 10px;
+  height: 0.828cm;
+  width: 0.828cm; /* background-image: url(../img/logo-s.jpg);background-size: cover;*/
+  margin-right: 0.138cm;
 }
 .banner > h3 {
   font-family: "Glegoo", serif;
   font-weight: 400;
-  font-size: 11pt;
+  font-size: 5.5pt;
 }
 .marcagua {
   position: absolute;
   z-index: 1000;
   opacity: 0.1;
-  width: 330px;
-  height: 330px;
+  width: 4.554cm;
+  height: 4.554cm;
   margin-left: 25%;
   margin-right: 25%; /*background-image: url(../img/logo-m.jpg);background-size: cover*/
 }
 .datos {
   position: absolute;
-  top: 80px;
-  height: 60px;
-  width: 320px;
+  top: 1.104cm;
+  height: 0.828cm;
+  width: 4.416cm;
   left: 12%;
   font-family: "Glegoo", serif;
   font-weight: 700;
-  font-size: 15pt;
+  font-size: 7.5pt;
   z-index: 2;
 }
 .foto > img {
@@ -140,43 +151,44 @@
   opacity: 1;
 }
 .foto {
-  position: absolute; /*border: solid 2px rgba(10,70,40,.7);*/
-  height: 190px;
-  width: 200px;
-  top: 80px;
-  right: 30px;
+  position: absolute; /*border: solid 2*0.0138 rgba(10,70,40,.7);*/
+  height: 2.622cm;
+  width: 2.76cm;
+  top: 1.104cm;
+  right: 0.414cm;
   overflow: hidden;
   z-index: 0;
 }
 .curso {
-  margin-bottom: 6px;
+  margin-bottom: 0.0828cm;
   position: absolute;
-  left: 70px;
-  bottom: 90px;
+  left: 0.966cm;
+  bottom: 1.242cm;
   font-family: "Glegoo", serif;
   font-weight: 700;
-  font-size: 25pt;
+  font-size: 12.5pt;
   z-index: 2;
 }
 .barcode-box {
   position: absolute;
-  width: 300px;
-  height: 60px;
-  left: 60px;
-  bottom: 40px;
+  width: 4.14cm;
+  height: 0.828cm;
+  left: 0.828cm;
+  bottom: 0.552cm;
   font-family: "", serif;
-  font-size: 200px;
+  font-size: 2.76cm;
   overflow: hidden;
 }
 .barcode {
   position: absolute;
   width: 100%;
-  height: 60px;
-  font-size: 60pt;
+  height: 0.828cm;
+  font-size: 30pt;
 }
+
 .barcode-img {
   position: absolute;
-  top: -80px;
+  top: -1.104cm;
   width: 99%;
   opacity: 1;
 }

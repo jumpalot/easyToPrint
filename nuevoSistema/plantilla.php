@@ -3,6 +3,7 @@
         <img src="../img/logo-m.jpg" width=100% height="100%"/>
     </div>
     <section class="ncarnet rotate">
+        <img class="imgbar" src="../img/borde.jpg" width="300" height="50">
         <div class="datocarnet"><h1>Nº <?=$carnet?></h1></div>
     </section>
     <section class="banner">

@@ -4,9 +4,9 @@
             file_get_contents("https://itching-requirement.000webhostapp.com/getAlumnos.php?curso=$curso&division=$division")
         );
     }
-    function getAlumno($carnet){
+    function getAlumno($tipo,$dato){
         return json_decode(
-            file_get_contents("https://itching-requirement.000webhostapp.com/getAlumno.php?carnet=$carnet")
+            file_get_contents("https://itching-requirement.000webhostapp.com/getAlumno.php?$tipo=$dato")
         );
     };
     function getFoto($carnet){

@@ -1,15 +1,15 @@
 <?php
     require('../vendor/autoload.php');
     
-    require('funciones.php');
+    require('model/funciones.php');
     switch(@$_GET['page']){
         case 'list':
             $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
             include('view/simpleheader.html');
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){
-                    include('bindAlumno.php');
-                    include('plantilla.php');
+                    include('model/bindAlumno.php');
+                    include('tpl/plantilla.php');
                 }
             }
             include('js/autoprint.html');
@@ -20,7 +20,7 @@
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){
                     $carnet=$alumno->Carnet;
-                    include('parteAtras.php');
+                    include('tpl/parteAtras.php');
                 }
             }
             include('js/autoprint.html');

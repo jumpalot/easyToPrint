@@ -117,7 +117,7 @@
   position: relative;
   float: left;
   height: 0.828cm;
-  width: 0.828cm; /* background-image: url(../img/logo-s.jpg);background-size: cover;*/
+  width: 0.828cm; /* background-image: url(/img/logo-s.jpg);background-size: cover;*/
   margin-right: 0.138cm;
 }
 .banner > h3 {
@@ -132,7 +132,7 @@
   width: 4.554cm;
   height: 4.554cm;
   margin-left: 25%;
-  margin-right: 25%; /*background-image: url(../img/logo-m.jpg);background-size: cover*/
+  margin-right: 25%; /*background-image: url(/img/logo-m.jpg);background-size: cover*/
 }
 .datos {
   position: absolute;

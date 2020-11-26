@@ -7,7 +7,14 @@ include('DBCon.php');
 use RebaseData\InputFile\InputFile;
 use RebaseData\Converter\Converter;
 
-$inputFile = new InputFile($_FILES['base']);//aqui metes la base de datos a convertir
+function getArchivo(){
+    $nombre = basename($_FILES['base']['name']);
+    move_uploaded_file($_FILES['base']['tmp_name'], $nombre);
+    return $nombre;
+}
+
+$file = getArchivo();
+$inputFile = new InputFile($file);//aqui metes la base de datos a convertir
 $inputFiles = [$inputFile];
 
 $converter = new Converter();
@@ -49,7 +56,7 @@ foreach ($table->getRowsIterator() as $row) {
 
     }
     
-
+    unlink($file);       //por último, elimino el archivo que me enviaron
 //dni! carnet! nombre! sexo curso! division! turno! año pago impreso fechain horain fechapa horapa telefono
 //nombre apellido dni carnet foto miniatura haslmg curso division idturno
 ?>

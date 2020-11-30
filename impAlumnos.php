@@ -8,7 +8,7 @@ use RebaseData\InputFile\InputFile;
 use RebaseData\Converter\Converter;
 
 function getArchivo(){
-    $nombre = basename($_FILES['base']['name']);
+    $nombre = './imports/'.basename($_FILES['base']['name']);
     move_uploaded_file($_FILES['base']['tmp_name'], $nombre);
     return $nombre;
 }

@@ -1,7 +1,7 @@
 <?php
     include('DBCon.php');
     $idl = $_POST['idl'];
-    $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido
+    $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido, cantidad
             FROM alumno_lista 
             NATURAL JOIN alumnos
             WHERE idLista='$idl";

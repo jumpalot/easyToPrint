@@ -65,7 +65,7 @@
         $turno = getTurno($row['turno']);
         $carnet = $row['carnet'];
         $curso = $row['curso'];
-        $division = $row['div'];
+        $division = ($row['div']=="")?"0":$row['div'];
         $dni = $row['dni'];
         //aqui se concatenan los datos a la query
         $sql .= " ('$carnet', '$curso', '$division', '$dni', '$turno', '$nombre', '$apellido'),";

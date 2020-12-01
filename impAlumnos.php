@@ -13,6 +13,7 @@
         return $nombre;
     }
     function getNomApe($row){
+        $row = explode(",", $row)[0];
         $datos= explode(" ", $row);//recorta el nombre 
         switch (count($datos)){
             case 0:

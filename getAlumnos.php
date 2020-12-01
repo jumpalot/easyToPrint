@@ -1,7 +1,8 @@
 <?php
     include('DBCon.php');
     $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido, hasImg, Dni, Turno 
-            FROM alumnos NATURAL JOIN turnos";
+            FROM alumnos NATURAL JOIN turnos
+            ORDER BY Curso ASC, Division ASC, hasImg ASC, Apellido ASC";
     if(isset($_GET['curso']) && $_GET['curso']!="0" ){
         $curso=$_GET['curso'];
         $sql.=" WHERE Curso='$curso'";

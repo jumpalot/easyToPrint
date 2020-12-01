@@ -55,7 +55,7 @@
     $table = $database->getTable('alumnos');//aqui llama a la tabla
 
     $sql = "INSERT INTO alumnos 
-                (Carnet, Curso, Division, Dni, Turno, Nombre, Apellido) 
+                (Carnet, Curso, Division, Dni, idTurno, Nombre, Apellido) 
             VALUES";
 
     foreach ($table->getRowsIterator() as $row) {
@@ -74,7 +74,7 @@
     $sql .= "ON DUPLICATE KEY UPDATE   
                 Curso=VALUES(Curso),
                 Division=VALUES(Division),
-                Turno=VALUES(Turno)";
+                idTurno=VALUES(idTurno)";
     $db->query($sql);    //enviamos los datos
     echo $db->error;     //debug
     mysqli_close($db);   //cerramos la conexion con la base de datos

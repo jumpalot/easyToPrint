@@ -57,21 +57,24 @@
     foreach ($table->getRowsIterator() as $row) {
         
         [$nombre, $apellido] = getNomApe($row['nombre']);
-        
         $turno = getTurno($row['turno']);
-        
+        $carnet = $row['carnet'];
+        $curso = $row['curso'];
+        $division = $row['div'];
+        $dni = $row['dni'];
         //aqui inserta los datos en la db
         $sql = "INSERT INTO alumnos 
-                (Carnet, Curso, Division, Dni, Nombre, Apellido, Turno ) 
+                (Carnet, Curso, Division, Dni, Turno, Nombre, Apellido) 
                 VALUES (
-                    '".$row['carnet']."', 
-                    '".$row['curso']."',
-                    '".$row['div']."',
-                    '".$row['dni']."',
-                    '$nombre', 
-                    '$apellido',
-                    '$turno'
+                    '$carnet', 
+                    '$curso',   '$division',
+                    '$dni',     '$turno',
+                    '$nombre',  '$apellido'  
                 )
+                ON DUPLICATE KEY UPDATE
+                    Curso='$curso',     Division='$division',
+                    Dni='$dni',         Turno='$turno',
+                    Nombre='$nombre',   Apellido='$apellido'
         ";
         $db->query($sql);
     }

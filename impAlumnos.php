@@ -54,30 +54,28 @@
     $database = $converter->convertToDatabase($inputFiles);
     $table = $database->getTable('alumnos');//aqui llama a la tabla
 
+    $sql = "INSERT INTO alumnos 
+                (Carnet, Curso, Division, Dni, Turno, Nombre, Apellido) 
+            VALUES";
+
     foreach ($table->getRowsIterator() as $row) {
-        
+        //data bind
         [$nombre, $apellido] = getNomApe($row['nombre']);
         $turno = getTurno($row['turno']);
         $carnet = $row['carnet'];
         $curso = $row['curso'];
         $division = $row['div'];
         $dni = $row['dni'];
-        //aqui inserta los datos en la db
-        $sql = "INSERT INTO alumnos 
-                (Carnet, Curso, Division, Dni, Turno, Nombre, Apellido) 
-                VALUES (
-                    '$carnet', 
-                    '$curso',   '$division',
-                    '$dni',     '$turno',
-                    '$nombre',  '$apellido'  
-                )
-                ON DUPLICATE KEY UPDATE
-                    Curso='$curso',     Division='$division',
-                    Dni='$dni',         Turno='$turno',
-                    Nombre='$nombre',   Apellido='$apellido'
-        ";
-        $db->query($sql);
+        //aqui se concatenan los datos a la query
+        $sql .= " ('$carnet', '$curso', '$division', '$dni', '$turno', '$nombre', '$apellido'),";
     }
+    $sql = substr($sql, 0, -1);         //eliminar la ultima coma
+    //si ya existe el carnet solo cambian los datos que cambian con el tiempo
+    $sql .= "ON DUPLICATE KEY UPDATE   
+                Curso=VALUES(Curso),
+                Division=VALUES(Division),
+                Turno=VALUES(Turno)";
+    $db->query($sql);    //enviamos los datos
     mysqli_close($db);   //cerramos la conexion con la base de datos
     unlink($file);       //por último, elimino el archivo que me enviaron
     //dni! carnet! nombre! sexo curso! division! turno! año pago impreso fechain horain fechapa horapa telefono

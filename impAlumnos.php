@@ -76,6 +76,7 @@
                 Division=VALUES(Division),
                 Turno=VALUES(Turno)";
     $db->query($sql);    //enviamos los datos
+    echo $db->error;     //debug
     mysqli_close($db);   //cerramos la conexion con la base de datos
     unlink($file);       //por último, elimino el archivo que me enviaron
     //dni! carnet! nombre! sexo curso! division! turno! año pago impreso fechain horain fechapa horapa telefono

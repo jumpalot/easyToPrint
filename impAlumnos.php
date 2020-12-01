@@ -28,7 +28,7 @@
                 $nombre = $datos[1]." ".$datos[2];
                 $apellido = $datos[0];
             break;
-            case 3:
+            case 4:
                 $nombre = $datos[2]." ".$datos[3];
                 $apellido = $datos[0]." ".$datos[1];
             break;

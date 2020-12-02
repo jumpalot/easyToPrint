@@ -206,6 +206,15 @@
 .hidden {
   display: none;
 }
+.card {
+  padding: 2rem;
+}
+.carousel-control-prev {
+    left: -2.8em;
+}
+.carousel-control-next {
+    right: -2.8em;
+}
 @media screen and (max-width: 960px) {
   #btimportar, form {
     display: none;

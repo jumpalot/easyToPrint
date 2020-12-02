@@ -18,10 +18,10 @@
             file_get_contents("$url/getAlumno.php?carnet=$carnet")
         );
     };
-    function getFoto($carnet){
+    function getFoto($carnet, $original){
         global $url;
         return file_get_contents(
-            "$url/getFoto.php?carnet=$carnet"
+            "$url/getFoto.php?carnet=$carnet&original=$original"
         );
     }
 ?>

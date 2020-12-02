@@ -4,25 +4,30 @@
     require('model/funciones.php');
     switch(@$_GET['page']){
         case 'list':
+            include('view/simpleheader.html');
             if (@$_GET['listcarnets'])
                 $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
             else
                 $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
-            include('view/simpleheader.html');
-            foreach($alumnos as $alumno){
+            $original=@$_GET['originalSize'];
+            if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
                 if($alumno->hasImg){
                     include('model/bindAlumno.php');
                     include('tpl/plantilla.php');
                 }
             }
+            else foreach($alumnos as $alumno){
+                include('model/bindAlumno.php');
+                include('tpl/plantilla.php');
+            }
             include('js/autoprint.html');
             break;
         case 'reverse':
+            include('view/simpleheader.html');
             if (@$_GET['listcarnets'])
                 $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
             else
                 $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
-            include('view/simpleheader.html');
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){
                     $carnet=$alumno->Carnet;

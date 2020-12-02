@@ -4,7 +4,10 @@
     require('model/funciones.php');
     switch(@$_GET['page']){
         case 'list':
-            $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
+            if (@$_GET['listcarnets'])
+                $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
+            else
+                $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
             include('view/simpleheader.html');
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){

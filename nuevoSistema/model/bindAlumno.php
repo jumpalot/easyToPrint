@@ -5,5 +5,5 @@
     $turno=$alumno->Turno;
     $curso=$alumno->Curso.'º '.$alumno->Division.'ª';
     $escuela=($alumno->Division<4)?"Técnica":"Secundaria";
-    $foto=getFoto($carnet);
+    $foto=getFoto($carnet, $original);
 ?>

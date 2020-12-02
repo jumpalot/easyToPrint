@@ -8,6 +8,7 @@ window.onload = () => {
         );
         $('#cursos').html(lista);
     })
+    $("#izquierda").hide()
 }
 function actualizarDivis(curso){
     if (curso!="")
@@ -19,6 +20,13 @@ function actualizarDivis(curso){
             $('#divisiones').html(lista);
         })
 }
-function limpiar(){
+function limpiar(id){
     $("textarea#listcarnets").val("")
+    if(id=="izquierda") {
+        $("#derecha").hide()
+        $("#izquierda").show()
+    } else {
+        $("#derecha").show()
+        $("#izquierda").hide()
+    }
 }

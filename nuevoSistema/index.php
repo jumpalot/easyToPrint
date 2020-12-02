@@ -9,7 +9,6 @@
                 $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
             else
                 $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
-            $original=@$_GET['originalSize'];
             if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
                 if($alumno->hasImg){
                     include('model/bindAlumno.php');

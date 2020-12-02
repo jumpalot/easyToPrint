@@ -4,7 +4,8 @@
     $sql = "SELECT Carnet, Curso, Division, Nombre, Apellido, cantidad
             FROM alumno_lista 
             NATURAL JOIN alumnos
-            WHERE idLista='$idl'";
+            WHERE idLista='$idl'
+            ORDER BY Curso ASC, Division ASC, Apellido ASC";
     $aux = array();
     foreach($db->query($sql) as $alumno)
         array_push($aux, $alumno);

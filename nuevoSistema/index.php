@@ -18,7 +18,10 @@
             include('js/autoprint.html');
             break;
         case 'reverse':
-            $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
+            if (@$_GET['listcarnets'])
+                $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
+            else
+                $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
             include('view/simpleheader.html');
             foreach($alumnos as $alumno){
                 if($alumno->hasImg){

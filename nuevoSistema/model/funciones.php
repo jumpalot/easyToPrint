@@ -6,6 +6,12 @@
             file_get_contents("$url/getAlumnos.php?curso=$curso&division=$division")
         );
     }
+    function getAlumnosByCarnet($carnets){
+        global $url;
+        return json_decode(
+            file_get_contents("$url/getAlumnos.php?carnets=$carnets")
+        );
+    }
     function getAlumno($carnet){
         global $url;
         return json_decode(

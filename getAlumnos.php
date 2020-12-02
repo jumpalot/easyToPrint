@@ -13,6 +13,12 @@
     else if(isset($_GET['division']) && $_GET['division']!="-1"){
         $division=$_GET['division'];
         $sql.=" WHERE Division='$division'";
+    } else if(isset($_GET['carnets'])){
+        $carnets = explode(';', $_GET['carnets']);
+        $sql .= " WHERE";
+        foreach($carnets as $carnet)
+            $sql .= " Carnet='$carnet' OR";
+        $sql = substr($sql, 0, -3);
     }
     $sql .= " ORDER BY Curso ASC, Division ASC, hasImg ASC, Apellido ASC";
     $aux = array();

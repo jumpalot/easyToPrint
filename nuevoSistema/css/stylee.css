@@ -211,6 +211,9 @@
     display: none;
   }
   .hidden{
-    display: flex;
+    display: block;
+  }
+  button {
+    margin-top: 2rem;
   }
 }

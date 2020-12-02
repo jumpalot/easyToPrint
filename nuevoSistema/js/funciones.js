@@ -22,7 +22,7 @@ function actualizarDivis(curso){
 }
 function limpiar(id){
     $("textarea#listcarnets").val("")
-    if(id=="izquierda") {
+    if(id=="derecha") {
         $("#derecha").hide()
         $("#izquierda").show()
     } else {

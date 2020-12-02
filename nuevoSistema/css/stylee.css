@@ -207,7 +207,7 @@
   display: none;
 }
 @media screen and (max-width: 960px) {
-  #btimportar, .card {
+  #btimportar, form {
     display: none;
   }
   .hidden{

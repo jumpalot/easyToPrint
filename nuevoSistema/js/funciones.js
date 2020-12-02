@@ -19,3 +19,6 @@ function actualizarDivis(curso){
             $('#divisiones').html(lista);
         })
 }
+function limpiar(){
+    $("textarea#listcarnets").val("")
+}

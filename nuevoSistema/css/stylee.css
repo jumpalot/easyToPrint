@@ -222,7 +222,7 @@
   .hidden{
     display: block;
   }
-  button {
+  a {
     margin-top: 2rem;
   }
 }

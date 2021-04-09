@@ -1,1 +1,1 @@
-<?php $db = new mysqli('localhost','3635','3635','3635'); ?>
+<?php $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');?>

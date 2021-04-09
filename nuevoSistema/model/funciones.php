@@ -1,5 +1,5 @@
 <?php
-    $url = "http://mattprofe.com.ar:81/alumno/3635/TESIS";
+    $url = "http://portalgardey.escuelarobertoarlt.com.ar/easyCarnet";
     function getAlumnos($curso, $division){
         global $url;
         return json_decode(

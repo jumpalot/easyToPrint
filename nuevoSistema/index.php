@@ -27,11 +27,14 @@
                 $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
             else
                 $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
-            foreach($alumnos as $alumno){
+            if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
                 if($alumno->hasImg){
                     $carnet=$alumno->Carnet;
                     include('tpl/parteAtras.php');
                 }
+            } else foreach($alumnos as $alumno){
+                $carnet=$alumno->Carnet;
+                include('tpl/parteAtras.php');
             }
             include('js/autoprint.html');
             break;  

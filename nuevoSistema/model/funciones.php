@@ -1,6 +1,6 @@
 <?php
-    $archiURL=fopen("direccion.txt","r");
-    $url = fgets($archiURL);
+    
+    $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on' ? "https" : "http")."://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
     function getAlumnos($curso, $division){
         global $url;
         return json_decode(
@@ -25,6 +25,4 @@
             "$url/getFoto.php?carnet=$carnet&original=$original"
         );
     }
-
-    fclose($archiURL);
 ?>

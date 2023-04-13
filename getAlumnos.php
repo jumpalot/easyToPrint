@@ -20,6 +20,9 @@
             $sql .= " Carnet='$carnet' OR";
         $sql = substr($sql, 0, -3);
     }
+    if (@$_GET['noImpresos']){
+        $sql.= ' WHERE Impreso=FALSE';
+    }
     $sql .= " ORDER BY Curso ASC, Division ASC, hasImg ASC, Apellido ASC";
     $aux = array();
     foreach($db->query($sql) as $alumno)

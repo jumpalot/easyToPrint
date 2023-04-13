@@ -1,5 +1,6 @@
 <?php
-    $url = "http://portalgardey.escuelarobertoarlt.com.ar/easyCarnet";
+    $archiURL=fopen("direccion.txt","r");
+    $url = fgets($archiURL);
     function getAlumnos($curso, $division){
         global $url;
         return json_decode(
@@ -24,4 +25,6 @@
             "$url/getFoto.php?carnet=$carnet&original=$original"
         );
     }
+
+    fclose($archiURL);
 ?>

@@ -1,6 +1,6 @@
 <?php
     
-    $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on' ? "https" : "http")."://{$_SERVER['HTTP_HOST']}";
+    $url = "https://easyapp.escuelarobertoarlt.com.ar/easyCarnet";
     function getAlumnos($curso, $division){
         global $url;
         return json_decode(

@@ -21,7 +21,7 @@
         $sql = substr($sql, 0, -3);
     }
     if (@$_GET['noImpresos']){
-        $sql.= ' WHERE Impreso=FALSE';
+        $sql.= ' AND Impreso=0';
     }
     $sql .= " ORDER BY Curso ASC, Division ASC, hasImg ASC, Apellido ASC";
     $aux = array();

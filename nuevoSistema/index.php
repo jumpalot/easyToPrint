@@ -9,17 +9,19 @@
                 $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
             else
                 $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
-            if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
-                if($alumno->hasImg){
+            if(@$alumnos){
+                if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
+                    if($alumno->hasImg){
+                        include('model/bindAlumno.php');
+                        include('tpl/plantilla.php');
+                    }
+                }
+                else foreach($alumnos as $alumno){
                     include('model/bindAlumno.php');
                     include('tpl/plantilla.php');
                 }
-            }
-            else foreach($alumnos as $alumno){
-                include('model/bindAlumno.php');
-                include('tpl/plantilla.php');
-            }
-            include('js/autoprint.html');
+                include('js/autoprint.html');
+            } else echo "No se recibieron alumnos";
             break;
         case 'reverse':
             include('view/simpleheader.html');
@@ -27,16 +29,18 @@
                 $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
             else
                 $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
-            if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
-                if($alumno->hasImg){
+            if(@$alumnos){
+                if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
+                    if($alumno->hasImg){
+                        $carnet=$alumno->Carnet;
+                        include('tpl/parteAtras.php');
+                    }
+                } else foreach($alumnos as $alumno){
                     $carnet=$alumno->Carnet;
                     include('tpl/parteAtras.php');
                 }
-            } else foreach($alumnos as $alumno){
-                $carnet=$alumno->Carnet;
-                include('tpl/parteAtras.php');
-            }
-            include('js/autoprint.html');
+                include('js/autoprint.html');
+            } else echo "No se recibieron alumnos";
             break; 
         default:
             include('view/header.html');

@@ -6,9 +6,9 @@
         case 'list':
             include('view/simpleheader.html');
             if (@$_GET['listcarnets'])
-                $alumnos = getAlumnosByCarnet($_GET['listcarnets']);
+                $alumnos = getAlumnosByCarnet($_GET['listcarnets'], @$_GET['noImpresos']);
             else
-                $alumnos = getAlumnos($_GET['curso'], $_GET['division']);
+                $alumnos = getAlumnos($_GET['curso'], $_GET['division'], @$_GET['noImpresos']);
             if(@$alumnos){
                 if (@$_GET['onlyWithPhotos']) foreach($alumnos as $alumno){
                     if($alumno->hasImg){

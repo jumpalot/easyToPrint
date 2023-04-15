@@ -2,8 +2,8 @@
     include('DBCon.php');
     $sql = "UPDATE alumnos 
             SET Impreso = TRUE";
-    if(isset($_GET['carnets'])){
-        $carnets = explode(';', $_GET['carnets']);
+    if(isset($_GET['listcarnets'])){
+        $carnets = explode(';', $_GET['listcarnets']);
         $sql .= " WHERE";
         foreach($carnets as $carnet)
             $sql .= " Carnet='$carnet' OR";

@@ -17,4 +17,5 @@
     $db->query($sql);
     echo $db->error;
     mysqli_close($db);
+    echo "completado";
 ?>

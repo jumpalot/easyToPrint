@@ -30,3 +30,14 @@ function limpiar(id){
         $("#izquierda").hide()
     }
 }
+function guardarImpreso(id){
+    datos = $(".form-signin").serialize()
+    $.post("../marcarImpresos.php?"+datos, (error) => {
+        if (error == "completado"){
+            alert ("Impresiones registradas correctamente")
+        } else {
+            alert (error)
+        }
+    })
+    $(id).hide()
+}

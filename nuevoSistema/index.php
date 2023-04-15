@@ -38,8 +38,6 @@
             }
             include('js/autoprint.html');
             break; 
-        case 'guardarImpreso':
-            include('../marcarimpresos.php');
         default:
             include('view/header.html');
             include('view/main.html');

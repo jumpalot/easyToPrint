@@ -17,6 +17,6 @@ Proponemos el siguiente flujo de trabajo
 - Una vez visto que se imprimió correctamente se usa el boton "Guardar como impreso"
 - Siempre habrá alumnos que no estén presentes al sacar las fotos, cuando se tenga esas fotos se puede imprimir todos los alumnos restantes seleccionando "todos" en cursos y divisiones, con las opciones "Solo no Impresos" y "Solo alumnos con foto"
 - Si un alumno perdiera su carnet y hubiera que volver a imprimirlo encontrará una flecha a la derecha de donde se selecciona el curso/division, ahí podrá escribir carnets específicos a imprimir
-### Otras aclaraciones
+## Otras aclaraciones
 Si desea migrar este sistema deberá crear un nuevo archivo DBCon.php en la raiz siguiendo el ejemplo de DBConExample.php
 Pronto agregaremos en el repositorio los archivos necesarios para importar la base de datos que usa el sistema

@@ -7,7 +7,7 @@ Deben importarse usando el boton que hay esquina inferior izquierda de la págin
 Debe subirse un único archivo .mdb, el cual no debe superar los 10mb ya que se usa la librería freemium RebaseData  
 Al estar basado en la base de datos de una única institución las tablas deben tener un formato específico que puede observarse en impAlumnos.php
 ### Tomar las foto carnet
-Para esto se usa la app [easyToPrint](https://github.com/jumpalot/easyToPrint/) (android 10+)  
+Para esto se usa la app ([easyToShot](https://github.com/jumpalot/easyToShot/)) (android 10+)  
 Esta puede descargarse al ingresar a la página principal desde un celular.  
 Una vez abierta deberan introducir la URL de esta página web, desde ahí podran tomar las fotos y editar los datos si se hubieran importado de forma erronea.  
 ### Imprimir las fotos
